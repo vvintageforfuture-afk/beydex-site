@@ -1,0 +1,32 @@
+/* 自前の見た目にする。テーマを使うと、フッターに GitHub の
+   アカウント名が出て、関係のない別事業と結びついてしまう */
+:root {
+  --bg: #FAFAF8; --surface: #FFFFFF; --text: #2C2C2A;
+  --muted: #5F5E5A; --faint: #8A8A85; --border: #E5E5E1; --accent: #A62651;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141413; --surface: #1F1F1E; --text: #EDEDEA;
+    --muted: #A5A49E; --faint: #87867F; --border: #3A3A37; --accent: #E5799F;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 32px 20px 64px;
+  background: var(--bg); color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  line-height: 1.8; font-size: 16px;
+}
+main { max-width: 680px; margin: 0 auto; }
+h1 { font-size: 28px; margin: 0 0 4px; }
+h2 { font-size: 18px; margin: 40px 0 12px; padding-top: 20px; border-top: 1px solid var(--border); }
+h1 + p { color: var(--muted); margin-top: 0; }
+a { color: var(--accent); }
+code, .mail { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+.note {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; padding: 16px 18px; margin: 20px 0;
+}
+.small { font-size: 13px; color: var(--faint); }
+ul { padding-left: 1.2em; }
+footer { margin-top: 56px; font-size: 13px; color: var(--faint); }
